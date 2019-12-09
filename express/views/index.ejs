@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title><%=title %></title>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>S/N</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Score</th>
+    </tr>
+      <% students.map(student=>{ %>
+        <tr>
+          <td><%= student.id %></td>
+          <td><%= student.name %></td>
+          <td><%= student.age %></td>
+          <td><%= student.score %></td>
+      </tr>
+      <%}) %>
+  </table>
+  <h3><%= success%></h3>
+  <h3><%= error%></h3>
+  <form action="/students" method="post">
+    <p>
+      <label for="name">Name</label>
+       <input type="text" name="name" value="">
+    </p>
+    <p>
+      <label for="age">Age</label>
+      <input type="number" name="age" value="">
+    </p>
+    <p>
+      <label for="score">Score</label>
+      <input type="number" name="score" value="">
+    </p>
+    <button type="submit" name="submit">Submit</button>
+  </form>
+  <footer>This is a footer</footer>
+</body>
+</html>

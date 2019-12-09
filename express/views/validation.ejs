@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title><%=title %></title>
+  </head>
+  <body>
+    <h3><%= success%></h3>
+    <h3><%= error%></h3>
+    <form action="/validation" method="post">
+      <p>
+        <label for="email">email</label>
+        <input type="email" email="name" value="" />
+      </p>
+      <p>
+        <label for="password">password</label>
+        <input type="password" name="password" value="" />
+      </p>
+      <p>
+        <label for="gender">gender</label>
+        male<input type="radio" name="gender" value="male" /> female<input
+          type="radio"
+          name="gender"
+          value="female"
+        />
+      </p>
+      <button type="submit" name="submit">Submit</button>
+    </form>
+    <footer>This is a footer</footer>
+  </body>
+</html>
